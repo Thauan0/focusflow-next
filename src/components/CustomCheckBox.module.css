@@ -1,0 +1,111 @@
+/* src/components/sections/CustomCheckbox.module.css */
+
+.checkboxWrapper {
+  position: relative;
+}
+
+.inpCbx {
+  display: none;
+}
+
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.cbx:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+/* O círculo visual */
+.cbx span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9ca3af;
+  transition: all 0.2s ease;
+}
+
+.cbx span:first-child svg {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 6px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+/* O texto da tarefa */
+.cbx span:last-child {
+  margin-left: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Linha de "riscado" */
+.cbx span:last-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #9ca3af;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.cbx:hover span:first-child {
+  border-color: #a78bfa; /* Roxo suave no hover */
+}
+
+/* --- ESTILOS QUANDO ESTÁ MARCADO --- */
+
+.inpCbx:checked + .cbx span:first-child {
+  background: #8b5cf6; /* Roxo vibrante */
+  border-color: #8b5cf6;
+  animation: check-animation 0.6s ease;
+}
+
+.inpCbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.inpCbx:checked + .cbx span:last-child {
+  color: #9ca3af;
+}
+
+.inpCbx:checked + .cbx span:last-child::after {
+  transform: scaleX(1);
+}
+
+@keyframes check-animation {
+  50% {
+    transform: scale(1.2);
+  }
+}

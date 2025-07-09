@@ -1,0 +1,59 @@
+/* src/components/sections/DynamicCard.module.css (ATUALIZADO) */
+
+.contentWrapper {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px; /* Um pouco mais de altura para o conteúdo */
+}
+
+/* Novo container para o conteúdo da técnica */
+.techniqueContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Novo estilo para o nome da técnica */
+.techniqueName {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #ede9fe; /* Lilás bem claro, quase branco */
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Estilos do botão (permanecem os mesmos) */
+.actionButton {
+  background-color: rgba(175, 64, 255, 0.15);
+  border: 1px solid rgba(175, 64, 255, 0.4);
+  color: #e9d5ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.actionButton:hover:not(:disabled) {
+  background-color: rgba(175, 64, 255, 0.3);
+  border-color: rgba(175, 64, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

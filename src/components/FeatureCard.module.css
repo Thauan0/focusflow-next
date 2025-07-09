@@ -1,0 +1,82 @@
+/* src/components/sections/FeatureCard.module.css (COM AS ALTERAÇÕES) */
+
+.card {
+  background-color: #1a1a2e; /* Fundo azul escuro */
+  box-shadow: 0px 8px 28px -9px rgba(13, 4, 53, 0.45);
+  position: relative; /* Essencial para posicionar as ondas dentro dele */
+  border-radius: 16px;
+  overflow: hidden; /* Essencial para cortar as ondas que giram para fora */
+  color: #ffffff; /* Cor do texto padrão será branca */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Efeito de zoom sutil no hover */
+}
+
+/* Estilo das ondas animadas */
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  border-radius: 40%;
+  /* A animação é definida aqui */
+  animation: wave 30s infinite linear;
+}
+
+/* Cada onda tem uma velocidade e opacidade diferente para criar profundidade */
+.wave:nth-of-type(2) {
+  animation-duration: 40s;
+  opacity: 0.4;
+}
+
+.wave:nth-of-type(3) {
+  animation-duration: 50s;
+  opacity: 0.2;
+}
+
+/* Contêiner do conteúdo que fica na frente */
+.content {
+  position: relative; /* Garante que ele siga o fluxo normal */
+  z-index: 1; /* Coloca este conteúdo ACIMA das ondas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #e0cffc; /* Um lilás bem claro para o ícone */
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Wrapper para o conteúdo injetado (children) */
+.childrenWrapper {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* A animação de rotação */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

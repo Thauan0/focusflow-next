@@ -1,0 +1,92 @@
+/* src/components/sections/BreakSuggestionSection.module.css */
+
+.section {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden; /* Para o efeito de fundo */
+}
+
+/* Um gradiente sutil de fundo para dar uma sensação de "calmaria" */
+.backgroundGradient {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  max-width: 1200px;
+  height: 100%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0) 70%);
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  padding: 1rem;
+  background-color: rgba(167, 139, 250, 0.1);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.headerIcon {
+  color: #c4b5fd;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.card {
+  max-width: 38rem; /* ~608px */
+  width: 100%;
+  padding: 2.5rem;
+  text-align: center;
+  background: rgba(26, 26, 46, 0.4);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(13, 4, 53, 0.3);
+}
+
+.suggestionText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e; /* Texto escuro para contraste */
+  background-color: #f9fafb; /* Botão branco/claro */
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

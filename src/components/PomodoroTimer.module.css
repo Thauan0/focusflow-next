@@ -1,0 +1,54 @@
+/* src/components/PomodoroTimer.module.css (COM AS ALTERAÇÕES) */
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* <-- Diminuído de 1.5rem */
+}
+.modeButtons {
+  display: flex;
+  background-color: #374151; /* slate-700 */
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+.modeButton {
+  padding: 0.25rem 1rem; /* <-- Diminuído o padding vertical e horizontal */
+  border: none;
+  background: none;
+  color: #9ca3af; /* slate-400 */
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modeButton.active {
+  background-color: #111827; /* slate-900 */
+  color: #f3f4f6;
+}
+.timeDisplay {
+  font-size: 4rem; /* <-- MUDANÇA PRINCIPAL! Reduzido de 6rem */
+  font-weight: 700;
+  font-family: monospace;
+  line-height: 1;
+  margin: 0.5rem 0; /* Adiciona margem para respirar */
+}
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+.controlButton {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+/* Adicionada uma regra para os SVGs dentro dos botões */
+.controlButton svg {
+  width: 28px;
+  height: 28px;
+}
+.controlButton:hover {
+  color: #f3f4f6;
+}

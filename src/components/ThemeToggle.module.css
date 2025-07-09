@@ -1,0 +1,56 @@
+/* src/components/ThemeToggle.module.css */
+.theme {
+  --bg-color-toggle: #fefefe;
+  --main-color-toggle: #111;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--bg-color-toggle);
+  border-radius: 100%;
+  border: 2px solid var(--main-color-toggle);
+  box-shadow: 4px 4px var(--main-color-toggle);
+  transition: all 0.2s ease-in-out;
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+}
+
+.iconMoon {
+  fill: var(--main-color-toggle);
+}
+
+.iconSun {
+  stroke: var(--main-color-toggle);
+  display: none;
+}
+
+.input:checked ~ .iconSun {
+  display: block;
+}
+
+.input:checked ~ .iconMoon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: 0px 0px var(--main-color-toggle);
+  transform: translate(3px, 3px);
+}

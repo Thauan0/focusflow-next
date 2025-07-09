@@ -1,0 +1,93 @@
+/* src/components/sections/FeaturesSection.module.css */
+
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Isso já centraliza todo o conteúdo da seção */
+}
+
+/* ================================================= */
+/* ==== NOVAS CLASSES PARA O CABEÇALHO CENTRALIZADO ==== */
+/* ================================================= */
+
+/* A chave para centralizar o texto do título e subtítulo */
+.header {
+  text-align: center;
+  margin-bottom: 4rem; /* Aumenta o espaço entre o título e os cards */
+}
+
+.headerTitle {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  /* A cor pode ser branca ou um cinza claro, dependendo do seu background */
+  color: #f9fafb; 
+}
+
+.headerSubtitle {
+  font-size: 1.125rem; /* 18px */
+  color: #d1d5db; /* Um cinza mais claro para o subtítulo */
+  max-width: 600px; /* Limita a largura para melhor legibilidade */
+  margin: 0 auto; /* Garante que o parágrafo fique centralizado */
+}
+
+
+/* ================================================= */
+/* ==== SEUS ESTILOS EXISTENTES (MANTIDOS) ==== */
+/* ================================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem; /* Aumentei um pouco o gap para mais respiro */
+}
+
+.card {
+  /* Efeito Glassmorphism */
+  background: rgba(249, 249, 249, 0.05); /* Fundo semi-transparente */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* O efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+  padding: 2rem;
+  transition: all 0.3s ease;
+  
+  /* Adicionado para garantir que o conteúdo se alinhe corretamente */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.iconWrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block; /* Para que o wrapper não ocupe a largura toda */
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: #a78bfa; /* Lilás para combinar */
+  display: block; /* Garante que o ícone se comporte bem dentro do wrapper */
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff; /* Título do card em branco para contraste */
+}
+
+.cardDescription {
+  color: #9ca3af;
+  flex-grow: 1; 
+}

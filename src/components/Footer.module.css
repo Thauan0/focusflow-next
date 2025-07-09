@@ -1,0 +1,49 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  /* Fundo sutil para se destacar um pouco do background principal */
+  background-color: rgba(17, 14, 31, 0.5); 
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto; /* Garante que o footer fique no final da página */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que o conteúdo quebre em telas menores */
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #9ca3af; /* Cinza claro para o texto */
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Espaçamento entre os ícones */
+}
+
+.link {
+  color: #9ca3af; /* Cor padrão dos ícones */
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #a78bfa; /* Cor de destaque roxa no hover */
+  transform: translateY(-2px); /* Efeito de elevação sutil */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column-reverse; /* Coloca os links sociais em cima do copyright */
+    gap: 1.5rem;
+  }
+}

@@ -1,7 +1,7 @@
 // src/components/sections/CustomCheckbox.tsx
 
 import React from 'react';
-import styles from './CustomCheckBox.module.css';
+import styles from './CustomCheckBoxStyle.module.css';
 
 interface CustomCheckboxProps {
   id: string;

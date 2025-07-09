@@ -23,6 +23,6 @@
       "@/*": ["src/*"]          // "./src/*" ou "src/*" — ambos funcionam, prefira sem o "./"
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js"],
   "exclude": ["node_modules"]
 }

@@ -101,7 +101,7 @@
 }
 
 .inpCbx:checked + .cbx span:last-child::after {
-  transform: scaleX(1);
+  transform: scaleX(1,);
 }
 
 @keyframes check-animation {
